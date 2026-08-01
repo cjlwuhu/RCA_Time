@@ -1,0 +1,27 @@
+.idea/
+.codex_doc_review/
+.venv*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+.env
+vendor/RCAEval/
+
+# Datasets and generated artifacts
+data/raw/
+data/RE1/
+data/.downloads/
+data/processed/
+data/figures/
+outputs/
+models/
+
+# Keep empty project directories visible in Git
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/figures/.gitkeep
+!outputs/figures/.gitkeep
+!outputs/predictions/.gitkeep
+!outputs/reports/.gitkeep
+!models/.gitkeep

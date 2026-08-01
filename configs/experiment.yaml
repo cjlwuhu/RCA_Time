@@ -1,0 +1,22 @@
+dataset:
+  suite: re1
+  system: online-boutique
+  raw_dir: data/raw/RE1
+
+window:
+  normal_minutes: 10
+  abnormal_minutes: 10
+  minimum_points: 20
+
+experiment:
+  methods:
+    - baro
+    - e_diagnosis
+    - circa
+  top_k: 5
+  random_seed: 42
+
+output:
+  predictions_dir: outputs/predictions
+  figures_dir: outputs/figures
+  reports_dir: outputs/reports

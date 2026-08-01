@@ -1,0 +1,8 @@
+[
+  {"time": 1692569309, "checkoutservice_latency": 0.11, "cartservice_cpu": 38.2, "paymentservice_mem": 61.0},
+  {"time": 1692569319, "checkoutservice_latency": 0.10, "cartservice_cpu": 39.1, "paymentservice_mem": 60.5},
+  {"time": 1692569329, "checkoutservice_latency": 0.12, "cartservice_cpu": 38.7, "paymentservice_mem": 60.8},
+  {"time": 1692569339, "checkoutservice_latency": 1.42, "cartservice_cpu": 39.0, "paymentservice_mem": 60.7},
+  {"time": 1692569349, "checkoutservice_latency": 1.55, "cartservice_cpu": 39.4, "paymentservice_mem": 60.9},
+  {"time": 1692569359, "checkoutservice_latency": 1.61, "cartservice_cpu": 39.2, "paymentservice_mem": 61.1}
+]
