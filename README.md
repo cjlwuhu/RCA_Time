@@ -139,14 +139,7 @@ D:\miniconda\envs\fastapi_env\python.exe
 | networkx | 3.6.1 |
 | matplotlib | 3.11.1 |
 
-### 已知依赖警告
 
-`sfr-pyrca 1.0.1` 声明需要 `scikit-learn>=0.24,<1.2`，而当前环境是
-`scikit-learn 1.9.0`。当前项目覆盖到的 EpsilonDiagnosis 路径已通过测试和真实案例运行，
-但不能据此保证 PyRCA 的所有模块都兼容。因此 `requirements.txt` 不执行盲目安装；伙伴复现时应先
-确认自己的 Python/Windows 环境，再逐项验证。
-
-检查环境一致性：
 
 ```powershell
 python -m pip check
@@ -631,7 +624,7 @@ python -m unittest tests.test_evaluate_results -v
 
 `test_run_rcaeval.py` 在真实数据不存在时会跳过对应测试，这是 unittest 的预期行为。
 
-### 12.4 端到端冒烟测试
+### 12.4 端到端测试
 
 ```powershell
 python -m scripts.inspect_re1 data/RE1/RE1-OB/adservice_delay/1
@@ -692,20 +685,8 @@ git check-ignore -v .env data/RE1 vendor/RCAEval outputs
 
 仓库不包含 RE1 数据和 RCAEval 源码，伙伴需要按第 5、6 节准备。
 
-## 16. 下一阶段：RAG 与日志工单
 
-建议按以下顺序继续：
-
-1. 先补一个真正的异常检测器，输出 `anomaly_timestamp` 和异常指标。
-2. 定义统一 `IncidentDocument`：案例、根因排名、图表路径、日志摘要、解决步骤、工单结论。
-3. 把结构化 JSON 和 Markdown 运行手册切分为可引用知识块。
-4. 加入向量检索，再加入关键词检索和重排。
-5. 回答必须返回来源案例、原文片段和置信信息。
-6. 最后接入日志与工单系统，并先做权限、脱敏和租户隔离。
-
-RAG 负责“从已有知识中检索相似事件和处置经验”，不替代时序异常检测，也不替代 RCA 算法。
-
-## 17. 官方学习资料
+## 16. 官方学习资料
 
 - [RCAEval 官方仓库](https://github.com/phamquiluan/RCAEval)
 - [RCAEval 1.2.0 Releases](https://github.com/phamquiluan/RCAEval/releases/tag/1.2.0)
@@ -716,10 +697,3 @@ RAG 负责“从已有知识中检索相似事件和处置经验”，不替代�
 - [Python unittest 文档](https://docs.python.org/zh-cn/3/library/unittest.html)
 - [Python `-m` 命令行选项](https://docs.python.org/zh-cn/3/using/cmdline.html#cmdoption-m)
 
-## 18. 协作建议
-
-- 先运行测试，再修改算法。
-- 新算法必须输出 `RCAResult`，不要给每种算法创建不同 JSON 格式。
-- 新指标必须同时添加正常、异常、边界测试。
-- 不要把 RE1 大文件、`.env` 或本机绝对路径提交到 Git。
-- 实验结论要同时注明数据范围、参数、随机种子和评价口径。
