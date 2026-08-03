@@ -697,3 +697,14 @@ git check-ignore -v .env data/RE1 vendor/RCAEval outputs
 - [Python unittest 文档](https://docs.python.org/zh-cn/3/library/unittest.html)
 - [Python `-m` 命令行选项](https://docs.python.org/zh-cn/3/using/cmdline.html#cmdoption-m)
 
+
+## 17. 引用文献
+
+- [[1] PyRCA: A Library for Metric-based Root Cause Analysis](https://arxiv.org/abs/2306.11417?utm_source=chatgpt.com)
+- [[2] RCAEval: A Benchmark for RCA of Microservice Systems](https://dl.acm.org/doi/10.1145/3701716.3715290?utm_source=chatgpt.com)
+- [[3] BARO: Robust Root Cause Analysis for Microservices via Multivariate Bayesian Online Change Point Detection
+Luan Pham, Huong Ha, Hongyu Zhang](https://doi.org/10.1145/3660805)
+- [[4] ε-Diagnosis: Unsupervised and Real-time Diagnosis of Small-window Long-tail Latency in Large-scale Microservice Platforms
+Huasong Shan, Yuan Chen, Haifeng Liu, Yunpeng Zhang, Xiao Xiao, Xiaofeng He, Min Li, Wei Ding](https://doi.org/10.1145/3308558.3313653)
+
+
